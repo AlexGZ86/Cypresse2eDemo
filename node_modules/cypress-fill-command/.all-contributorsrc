@@ -1,0 +1,68 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "stevedorries",
+      "name": "Steven Dorries",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3475101?v=4",
+      "profile": "https://github.com/stevedorries",
+      "contributions": [
+        "ideas",
+        "test",
+        "code"
+      ]
+    },
+    {
+      "login": "ncjones",
+      "name": "Nathan Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1155592?v=4",
+      "profile": "https://github.com/ncjones",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "amuta",
+      "name": "André Muta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7306481?v=4",
+      "profile": "https://github.com/amuta",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "DanielFerrariR",
+      "name": "Daniel Ferrari",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18249831?v=4",
+      "profile": "https://www.linkedin.com/in/danielferrarirey/",
+      "contributions": [
+        "infra",
+        "doc",
+        "test",
+        "code",
+        "review"
+      ]
+    },
+    {
+      "login": "Fishbowler",
+      "name": "Dan Caseley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2117083?v=4",
+      "profile": "https://github.com/Fishbowler",
+      "contributions": [
+        "ideas",
+        "test",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "cypress-fill-command",
+  "projectOwner": "DanielFerrariR",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
