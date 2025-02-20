@@ -12,6 +12,6 @@
 
 *.iml
 *.log
-/screenshots/
+/screenshots/**/*
 /videos/
 /coverage/
