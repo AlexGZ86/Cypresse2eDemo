@@ -1,11 +1,22 @@
-export function clickLMenuBtn() {
-    cy.getIdSelector('react-burger-menu-btn').click();
+class ProductsPage {
+    verifyProductPageLoaded() {
+        cy.url().should('include', '/inventory.html');
+        cy.get('.inventory_list').should('be.visible');
+    }
+
+    sortByPriceLowToHigh() {
+        cy.get('[data-test="product_sort_container"]').select('Price (low to high)');
+    }
+
+    addItemToCart(itemName) {
+        cy.contains('.inventory_item', itemName)
+            .find('button')
+            .click();
+    }
+
+    openCart() {
+        cy.get('.shopping_cart_link').click();
+    }
 }
 
-
-export function addFirstItemToCart() {
-    cy.getIdSelector('add-to-cart-sauce-labs-backpack').should('have.length', 1);
-    cy.getIdSelector('item_4_title_link').should('exist').click();
-    cy.contains('Sauce Labs Backpack');
-    cy.getIdSelector('add-to-cart').should('exist').click();
-}
+export default new ProductsPage();

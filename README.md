@@ -16,3 +16,4 @@ run the following steps in project directory
 3. run ```npm install cypress --save-dev```
  and lastly to open cypress to see and run the tests
 4. run ```npm run dev```
+

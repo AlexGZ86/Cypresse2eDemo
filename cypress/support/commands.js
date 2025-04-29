@@ -32,3 +32,25 @@ Cypress.Commands.add('getNameSelector', (nameSelector) => {
 Cypress.Commands.add('getDataTestSelector', (dataTestSelector) => {
     return cy.get(`[data-test="${dataTestSelector}"]`)
 });
+import LoginPage from '../pages/LoginPage';
+
+// Create a custom Cypress command
+Cypress.Commands.add('loginSession', (username, password) => {
+    cy.session([username, password], () => {
+        LoginPage.visit();
+        LoginPage.fillUsername(username);
+        LoginPage.fillPassword(password);
+        LoginPage.submit();
+        cy.url().should('include', '/inventory.html');
+    });
+});
+
+
+Cypress.Commands.add("loginWithToken", () => {
+    cy.request('POST', '/api/login', {
+        username: 'standard_user',
+        password: 'secret_sauce'
+    }).then((response) => {
+        window.localStorage.setItem('authToken', response.body.token);
+    });
+});
