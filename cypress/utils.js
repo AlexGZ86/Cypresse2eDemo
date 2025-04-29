@@ -1,6 +1,6 @@
-export const URL = {
-    LANDING_PAGE: 'https://www.saucedemo.com/',
-    HOME: ''
+export const Urls = {
+    LANDING_PAGE: 'https://www.saucedemo.com',
+    HOME: 'https://www.saucedemo.com/inventory.html'
 }
 export const USERS = {
     STANDARD_USER: 'standard_user',

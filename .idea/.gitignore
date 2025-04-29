@@ -9,3 +9,9 @@
 /.idea
 /target
 /package-lock.json
+
+*.iml
+*.log
+/screenshots/**/*
+/videos/
+/coverage/
