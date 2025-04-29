@@ -1,32 +1,18 @@
-const {defineConfig} = require("cypress");
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-    e2e: {
-        setupNodeEvents(on, config) {
-            // implement node event listeners here
-        },
-        baseUrl: 'https://www.saucedemo.com/',
-
-        root: true,
-        env: {
-            node: true,
-            browser: true,
-            es2021: true,
-            'cypress/globals': true
-        },
-        extends: [
-            'eslint:recommended',
-            'plugin:cypress/recommended'
-        ],
-        parserOptions: {
-            ecmaVersion: 'latest',
-            sourceType: 'module',
-        },
-        plugins: ['cypress'],
-        rules: {
-            'no-console': 'warn',
-            'cypress/no-unnecessary-waiting': 'error'
-        }
-
+  e2e: {
+    baseUrl: 'https://www.saucedemo.com',
+    setupNodeEvents(on, config) {
+      // implement node event listeners if needed
     },
+  },
+  viewportWidth: 1280,
+  viewportHeight: 1000,
+  retries: {
+    runMode: 1,
+    openMode: 0,
+  },
+  defaultCommandTimeout: 8000,
+  pageLoadTimeout: 31000,
 });
