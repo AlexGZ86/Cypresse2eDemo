@@ -5,7 +5,7 @@ class ProductsPage {
     }
 
     sortByPriceLowToHigh() {
-        cy.get('[data-test="product_sort_container"]').select('Price (low to high)');
+        cy.get('[data-test="product-sort-container"]').select('Price (low to high)');
     }
 
     addItemToCart(itemName) {
