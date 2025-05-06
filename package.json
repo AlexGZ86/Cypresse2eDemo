@@ -2,7 +2,7 @@
   "devDependencies": {
     "@release-it/keep-a-changelog": "^6.0.0",
     "css-loader": "^7.1.2",
-    "cypress": "^14.0.0",
+    "cypress": "^14.3.2",
     "cypress-fill-command": "^1.0.2",
     "eslint": "^9.20.1",
     "eslint-plugin-react": "^7.37.4",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "npx cypress open ",
-    "all":"npx cypress run",
+    "all": "npx cypress run",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   }
 }
