@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Cypress Tests with Video Upload
 
 on:
   push:
@@ -28,15 +28,8 @@ jobs:
       - name: Run Cypress tests
         run: npx cypress run --browser chrome
 
-      - name: Upload Cypress screenshots on failure
-        if: failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-
-      - name: Upload Cypress videos on failure
-        if: failure()
+      - name: Upload Cypress Videos
+        if: always()   # <-- Always run even if tests fail
         uses: actions/upload-artifact@v3
         with:
           name: cypress-videos
