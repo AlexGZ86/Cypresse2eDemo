@@ -1,6 +1,7 @@
 class NavigationPage {
     openMenu() {
-        cy.get('#react-burger-menu-btn').click();
+        cy.get('#react-burger-menu-btn').click({ force: true });
+    });
     }
 
     logout() {
