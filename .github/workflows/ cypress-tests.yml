@@ -16,8 +16,7 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+     
 
       - name: Cache Cypress binary
         uses: actions/cache@v4
@@ -38,14 +37,14 @@ jobs:
 
       - name: Upload Cypress screenshots on failure
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: cypress-screenshots
+          name: screenshots
           path: cypress/screenshots
 
       - name: Upload Cypress videos on failure
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: cypress-videos
+          name: videos
           path: cypress/videos
