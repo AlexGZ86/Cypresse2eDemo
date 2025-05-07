@@ -14,7 +14,7 @@ describe('Cart Page Tests', () => {
         ProductsPage.openCart();
         cy.go('back'); // Go back to products
         ProductsPage.openCart();
-        CartPage.verifyItemInCart('Sauce Labs Backpack');
+        CartPage.verifyItemInCart('Sauce Labs Backpack'); //broken to get failure in e2e
     });
 
     it('should display checkout button in cart', () => {
