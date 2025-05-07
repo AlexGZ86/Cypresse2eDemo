@@ -1,5 +1,6 @@
 import LoginPage from "../../pages/LoginPage";
 import ProductsPage from "../../pages/ProductsPage";
+import CartsPage from "../../pages/CartsPage";
 
 
 describe('Cart Page Tests', () => {
@@ -14,7 +15,7 @@ describe('Cart Page Tests', () => {
         ProductsPage.openCart();
         cy.go('back'); // Go back to products
         ProductsPage.openCart();
-        CartPage.verifyItemInCart('Sauce Labs Backpack'); //broken to get failure in e2e
+        CartsPage.verifyItemInCart('Sauce Labs Backpack'); //broken to get failure in e2e
     });
 
     it('should display checkout button in cart', () => {
