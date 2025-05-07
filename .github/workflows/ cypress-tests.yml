@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+  
   workflow_dispatch:
 
 jobs:
@@ -22,8 +20,19 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Cache Cypress binary
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            cypress-cache-${{ runner.os }}-
+
       - name: Install dependencies
         run: npm install
+      
+      - name: Install Cypress binary
+        run: npx cypress install
 
       - name: Run Cypress tests
         run: npx cypress run --browser chrome
