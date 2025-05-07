@@ -15,7 +15,7 @@ module.exports = defineConfig({
   },
   defaultCommandTimeout: 8000,
   pageLoadTimeout: 31000,
-  export default defineConfig({
   video: true,
-});
+  videoCompression:true,
+  screenshotOnRunFailure:true,
 });
