@@ -1,9 +1,6 @@
 name: Cypress Tests with Video Upload
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
