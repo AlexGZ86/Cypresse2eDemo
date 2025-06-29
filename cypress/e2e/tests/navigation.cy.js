@@ -12,6 +12,7 @@ describe('Navigation Menu Tests', () => {
     });
 
     it('should close menu when clicking outside', () => {
+        cy.get('.bm-cross-button').should('exist').and('be.visible');
         cy.get('.bm-cross-button').click(); // Close using X
         cy.get('.bm-menu-wrap').should('not.have.class', 'open');
     });
