@@ -15,6 +15,7 @@ describe('Cart Page Tests', () => {
         ProductsPage.openCart();
         cy.go('back'); // Go back to products
         ProductsPage.openCart();
+
         CartsPage.verifyItemInCart('Sauce Labs Backpack');
     });
 
