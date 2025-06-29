@@ -1,6 +1,7 @@
-import LoginPage from '../pages/LoginPage';
-import ProductsPage from '../pages/ProductsPage';
-import CartPage from '../pages/CartPage';
+import LoginPage from "../../pages/LoginPage";
+import ProductsPage from "../../pages/ProductsPage";
+import CartsPage from "../../pages/CartsPage";
+
 
 describe('Checkout Flow Tests', () => {
     beforeEach(() => {
@@ -12,7 +13,7 @@ describe('Checkout Flow Tests', () => {
     it('should complete a full checkout successfully', () => {
         ProductsPage.addItemToCart('Sauce Labs Backpack');
         ProductsPage.openCart();
-        CartPage.verifyItemInCart('Sauce Labs Backpack');
+        CartsPage.verifyItemInCart('Sauce Labs Backpack');
 
         // Start checkout
         cy.get('[data-test="checkout"]').click();
