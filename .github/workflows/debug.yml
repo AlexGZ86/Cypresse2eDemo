@@ -1,13 +1,43 @@
-name: Test Upload Artifact
-on: push
+name: Cypress PR Check
+
+on:
+  pull_request:
+
 jobs:
-  test:
+  cypress-pr:
     runs-on: ubuntu-latest
+
+    env:
+      BASE_URL: ${{ secrets.BASE_URL }}
+      USERNAME: ${{ secrets.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Upload Artifact
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress tests (Fail if any fail)
+        run: npx cypress run --browser chrome
+
+      - name: Upload Cypress Videos (if failed)
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: test-artifact
-          path: README.md
+          name: cypress-videos-pr
+          path: cypress/videos
+
+      - name: Upload Screenshots (if failed)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots-pr
+          path: cypress/screenshots
