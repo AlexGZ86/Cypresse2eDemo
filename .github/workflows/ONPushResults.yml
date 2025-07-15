@@ -34,7 +34,11 @@ jobs:
         run: npx cypress install
 
       - name: Run Cypress tests
-        run: npx cypress run --browser chrome
+        run: npm run cy:run --browser chrome
+        env:
+          CYPRESS_baseUrl:  ${{ secrets.BASE_URL }}
+          CYPRESS_username: ${{ secrets.USERNAME }}
+          CYPRESS_password: ${{ secrets.PASSWORD }}
 
       - name: Upload Cypress Videos
         if: always()   # <-- Always run even if tests fail
