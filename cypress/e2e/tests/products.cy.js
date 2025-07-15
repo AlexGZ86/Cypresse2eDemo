@@ -3,9 +3,9 @@ import ProductsPage from "../../pages/ProductsPage";
 
 describe('Products Page Tests', () => {
     beforeEach(() => {
-        LoginPage.visit();
-        LoginPage.login('standard_user', 'secret_sauce');
+        LoginPage.login();
         ProductsPage.verifyProductPageLoaded();
+
     });
 
     it('should display products after successful login', () => {

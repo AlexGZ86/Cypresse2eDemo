@@ -5,8 +5,7 @@ import CartsPage from "../../pages/CartsPage";
 
 describe('Cart Page Tests', () => {
     beforeEach(() => {
-        LoginPage.visit();
-        LoginPage.login('standard_user', 'secret_sauce');
+        LoginPage.login();
         ProductsPage.verifyProductPageLoaded();
     });
 
