@@ -34,7 +34,7 @@ jobs:
         run: npx cypress install
 
       - name: Run Cypress tests
-        run: npm run cy:run --browser chrome
+        run: npx cypress run --browser chrome
         env:
           CYPRESS_baseUrl:  ${{ secrets.BASE_URL }}
           CYPRESS_username: ${{ secrets.USERNAME }}
