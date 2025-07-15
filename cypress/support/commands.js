@@ -45,12 +45,3 @@ Cypress.Commands.add('loginSession', (username, password) => {
     });
 });
 
-
-Cypress.Commands.add("loginWithToken", () => {
-    cy.request('POST', '/api/login', {
-        username: 'standard_user',
-        password: 'secret_sauce'
-    }).then((response) => {
-        window.localStorage.setItem('authToken', response.body.token);
-    });
-});
