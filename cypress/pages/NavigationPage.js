@@ -1,11 +1,15 @@
 class NavigationPage {
     openMenu() {
+
         return cy
             .get('#react-burger-menu-btn')
             .should('be.visible')
             .click()
             .get('.bm-menu-wrap')
             .should('have.css', 'display', 'block')
+
+        cy.get('#react-burger-menu-btn').should('be.visible')
+
     }
 
 

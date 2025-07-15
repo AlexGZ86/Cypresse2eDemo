@@ -10,3 +10,4 @@ package-lock.json
 *.iml
 *.log
 coverage/
+.env

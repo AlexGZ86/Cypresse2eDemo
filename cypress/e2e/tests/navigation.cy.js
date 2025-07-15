@@ -11,6 +11,7 @@ describe('Navigation Menu Tests', () => {
     });
 
     it('should close menu when clicking x button', () => {
+        cy.get('.bm-cross-button').should('exist').and('be.visible');
         cy.get('.bm-cross-button').click();
         cy.get('.bm-menu-wrap').should('not.have.class', 'open');
     });
@@ -23,7 +24,5 @@ describe('Navigation Menu Tests', () => {
 
     it('should navigate to About page successfully', () => {
             NavigationPage.goToAbout()
-
-     }
-    )
+     });
 })
