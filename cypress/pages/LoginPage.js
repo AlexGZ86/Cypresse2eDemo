@@ -6,13 +6,12 @@ class LoginPage {
     fillUsername(username = Cypress.env('username')) {
         return cy.get('[data-test="username"]')
             .clear()
-            .type(username);
+            .type(username,{delay:20});
     }
 
-    fillPassword(password = Cypress.env('password')) {
-        return cy.get('[data-test="password"]')
-            .clear()
-            .type(password);
+   fillPassword(password = Cypress.env('password')) {
+        return cy.get('[data-test="password"]').click()
+            .type(password,{delay:20});
     }
 
     submit() {
