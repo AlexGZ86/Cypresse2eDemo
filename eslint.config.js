@@ -6,7 +6,6 @@ const pluginPrettier = require('eslint-plugin-prettier')
 module.exports = [
     // Base ✓
     {
-        root: true,
         ignores: ['node_modules', 'dist'],
         languageOptions: {
             globals: { ...globals.browser, ...globals.node },
