@@ -1,4 +1,7 @@
 {
+  "name": "Cypresse2eDemo",
+  "version": "1.0.0",
+  "type": "module",
   "devDependencies": {
     "@release-it/keep-a-changelog": "^6.0.0",
     "css-loader": "^7.1.2",
