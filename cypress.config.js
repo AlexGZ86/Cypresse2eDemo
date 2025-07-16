@@ -1,29 +1,29 @@
 // cypress.config.js
-require('dotenv').config();
-const { defineConfig } = require('cypress');
+require("dotenv").config();
+const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   env: {
     username: process.env.USERNAME,
-    password: process.env.PASSWORD
+    password: process.env.PASSWORD,
   },
 
   e2e: {
+    specPattern: "cypress/e2e/**/*.cy.js",
     baseUrl: process.env.BASE_URL,
     chromeWebSecurity: false,
     experimentalSessionAndOrigin: true,
     setupNodeEvents(on, config) {
       return config;
-    }
+    },
   },
 
   viewportWidth: 1800,
   viewportHeight: 1280,
 
-
   retries: {
     runMode: 1,
-    openMode: 0
+    openMode: 0,
   },
 
   defaultCommandTimeout: 8000,
@@ -32,8 +32,8 @@ module.exports = defineConfig({
   experimentalMemoryManagement: true,
 
   screenshotOnRunFailure: true,
-  screenshotsFolder: 'cypress/screenshots',
+  screenshotsFolder: "cypress/screenshots",
   video: true,
   videoCompression: true,
-  videosFolder: 'cypress/videos'
+  videosFolder: "cypress/videos",
 });
