@@ -2,7 +2,6 @@ import globals from 'globals';
 import pluginReact from 'eslint-plugin-react';
 import pluginCypress from 'eslint-plugin-cypress';
 import pluginPrettier from 'eslint-plugin-prettier';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/configs/recommended.js';
 import eslintPluginCypressRecommended from 'eslint-plugin-cypress/lib/configs/recommended.js';
 import eslintPluginReactRecommended from 'eslint-plugin-react/configs/recommended.js';
 import eslintRecommended from '@eslint/js';
@@ -32,9 +31,6 @@ export default [
 
   // React plugin rules
   eslintPluginReactRecommended,
-
-  // Prettier recommended
-  eslintPluginPrettierRecommended,
 
   // Your own project rules
   {
