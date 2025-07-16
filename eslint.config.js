@@ -2,12 +2,8 @@ import globals from 'globals';
 import pluginReact from 'eslint-plugin-react';
 import pluginCypress from 'eslint-plugin-cypress';
 import pluginPrettier from 'eslint-plugin-prettier';
-import eslintPluginCypressRecommended from 'eslint-plugin-cypress/lib/configs/recommended.js';
-import eslintPluginReactRecommended from 'eslint-plugin-react/configs/recommended.js';
-import eslintRecommended from '@eslint/js';
 
 export default [
-  // Base config
   {
     ignores: ['node_modules', 'dist'],
     languageOptions: {
@@ -22,17 +18,6 @@ export default [
       reportUnusedDisableDirectives: true,
     },
   },
-
-  // Base ESLint rules
-  eslintRecommended.configs.recommended,
-
-  // Cypress plugin rules
-  eslintPluginCypressRecommended,
-
-  // React plugin rules
-  eslintPluginReactRecommended,
-
-  // Your own project rules
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     languageOptions: {
