@@ -23,7 +23,7 @@
   "scripts": {
     "dev": "npx cypress open ",
     "all": "npx cypress run",
-    "lint": "eslint \"cypress/**/*.{js,ts,jsx,tsx}\"",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx --ignore-path .gitignore",
     "format:check": "prettier --check \"**/*.{js,ts,jsx,tsx,json,css,md}\"",
     "format:fix": "prettier --write \"**/*.{js,ts,jsx,tsx,json,css,md}\""
   }
