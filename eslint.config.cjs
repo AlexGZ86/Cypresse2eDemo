@@ -1,6 +1,5 @@
 const js = require('@eslint/js');
 const prettier = require('eslint-plugin-prettier');
-const react = require('eslint-plugin-react');
 const cypress = require('eslint-plugin-cypress');
 
 module.exports = [
@@ -12,10 +11,13 @@ module.exports = [
         languageOptions: {
             ecmaVersion: 'latest',
             sourceType: 'module',
+            globals: {
+                cy: 'readonly',
+                Cypress: 'readonly',
+            },
         },
         plugins: {
             prettier,
-            react,
             cypress,
         },
         rules: {
