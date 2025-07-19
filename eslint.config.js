@@ -5,7 +5,7 @@ import pluginPrettier from 'eslint-plugin-prettier';
 
 export default [
   {
-    ignores: ['node_modules', 'dist'],
+    ignores: ['cypress/**', 'node_modules/**', '.idea/**'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
