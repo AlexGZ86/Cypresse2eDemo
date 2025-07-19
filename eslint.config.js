@@ -1,3 +1,4 @@
+import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import cypress from 'eslint-plugin-cypress';
 import prettier from 'eslint-plugin-prettier';
