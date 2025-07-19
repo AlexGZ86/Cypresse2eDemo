@@ -1,6 +1,6 @@
 # Default ignored files
 /.idea/
-/shelf/
+/.idea/shelf/
 /workspace.xml
 /httpRequests/
 /dataSources/
@@ -49,3 +49,5 @@ temp/
 
 # Miscellaneous
 .cache/
+.idea/
+cypress/
