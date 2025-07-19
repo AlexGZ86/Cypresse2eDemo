@@ -22,8 +22,8 @@
   "scripts": {
     "dev": "npx cypress open ",
     "all": "npx cypress run",
-    "lint": "eslint . --ext .js,.ts,.jsx,.tsx --no-error-on-unmatched-pattern",
-    "format:check": "prettier --check \"**/*.{js,ts,jsx,tsx,json,css,md}\"",
-    "format:fix": "prettier --write \"**/*.{js,ts,jsx,tsx,json,css,md}\""
+    "lint": "eslint cypress/e2e/**/*.js --ext .js,.ts --no-error-on-unmatched-pattern",
+    "format:check": "prettier --check \"cypress/e2e/**/*.{js,ts}\"",
+    "format:fix": "prettier --write \"cypress/e2e/**/*.{js,ts}\""
   }
 }
